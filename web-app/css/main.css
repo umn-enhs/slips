@@ -11,12 +11,9 @@ h1, h2, h3, h4, h5, h6 {
 /* BASE LAYOUT */
 
 html {
-	background-color: #ddd;
-	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
-	background-image: linear-gradient(top, #aaa, #ddd);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
-	background-repeat: no-repeat;
+	background-color: #eee;
+	background-repeat: repeat-x;
+	background-image: url(http://www1.umn.edu/prod/fragments/ur_common/assets/img/homesite-background.png);
 	height: 100%;
 	/* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
 	-webkit-box-sizing: border-box;
@@ -42,9 +39,6 @@ body {
 	margin: 0 auto;
 	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-	   -moz-box-shadow: 0 0 0.3em #255b17;
-	-webkit-box-shadow: 0 0 0.3em #255b17;
-	        box-shadow: 0 0 0.3em #255b17;
 }
 
 #grailsLogo {
@@ -55,7 +49,7 @@ body {
 .ie6 body,
 .ie7 body,
 .ie8 body {
-	border-color: #255b17;
+	border-color: #8f011e;
 	border-style: solid;
 	border-width: 0 1px;
 }
@@ -65,7 +59,7 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #48802c;
+	color: #8f011e;
 }
 
 a:hover, a:active {
@@ -73,7 +67,7 @@ a:hover, a:active {
 }
 
 h1 {
-	color: #48802c;
+	color: #8f011e;
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
@@ -118,7 +112,7 @@ img {
 }
 
 .footer a {
-	color: #255b17;
+	color: #8f011e;
 }
 
 .spinner {
@@ -245,13 +239,6 @@ label {
 	margin: 0 0.25em 0 0;
 }
 
-input, select, textarea {
-	background-color: #fcfcfc;
-	border: 1px solid #cccccc;
-	font-size: 1em;
-	padding: 0.2em 0.4em;
-}
-
 select {
 	padding: 0.2em 0.2em 0.2em 0;
 }
@@ -283,7 +270,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .required-indicator {
-	color: #48802C;
+	color: #8f011e;
 	display: inline-block;
 	font-weight: bold;
 	margin-left: 0.3em;
@@ -589,3 +576,310 @@ a.skip {
 	position: absolute;
 	left: -9999px;
 }
+/* CAMPUS LINKS */
+
+#campus-links {
+	width: 960px;
+	height: 20px;
+	display:block;
+	padding-top:2px;
+	color: #000;
+	text-align: right;
+	background: #FFB829;
+	background: -moz-linear-gradient(left, #D88913 0%, #FFB829 55%, #FFB829 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#D88913), color-stop(55%,#FFB829), color-stop(100%,#FFB829));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D88913', endColorstr='#FFB829',GradientType=1 );
+	background: -o-linear-gradient(left, #D88913 0%,#FFB829 55%,#FFB829 100%);
+}
+
+.ie6 #campus-links,
+.ie7 #campus-links,
+.ie8 #campus-links {
+	padding-top:6px;
+	height:16px;
+}
+
+#campus-links * {
+	display: inline;
+	font-size: 11px;
+	line-height: 11px;
+}
+
+#campus-links h2 {
+	font-weight: normal;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#campus-links ul {
+	margin: 0 2px 0 15px;
+}
+
+#campus-links ul li {
+	padding: 1px 8px;
+}
+
+
+#campus-links ul li.sel {
+	background-color: #900021;
+	border: 1px solid #900021;
+	color: #FFF;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.ie6 #campus-links ul li.sel,
+.ie7 #campus-links ul li.sel,
+.ie8 #campus-links ul li.sel {
+	background: none;
+	border: none;
+	color: #000;
+}
+
+
+#campus-links ul a,
+#campus-links ul a:link,
+#campus-links ul a:visited {
+	color: #333;
+	text-decoration: none;
+}
+
+.ie6 #campus-links ul a,
+.ie6 #campus-links ul a:link,
+.ie6 #campus-links ul a:visited,
+.ie7 #campus-links ul a,
+.ie7 #campus-links ul a:link,
+.ie7 #campus-links ul a:visited,
+.ie8 #campus-links ul a,
+.ie8 #campus-links ul a:link,
+.ie8 #campus-links ul a:visited {
+	text-decoration: underline;
+}
+
+
+#campus-links ul a:hover,
+#campus-links ul a:focus,
+#campus-links ul a:active {
+	color: #5b0013;
+	text-decoration: underline;
+}
+
+/* MAST */
+
+header {
+	padding-bottom: 64px;
+}
+
+header div.mast {
+	clear: both;
+	float: left;
+	width: 960px;
+	background: #7a0019 url(http://www1.umn.edu/prod/fragments/ur_common/assets/img/umn-bg-header.gif) repeat-x;
+}
+
+.ie6 header div.mast {
+	width: 950px;
+}
+
+
+/* .mast-banner */
+
+header div.mast a.mast-banner {
+	display: block;
+	width: 320px;
+	height: 62px;
+	position: relative;
+	float: left;
+}
+
+header div.mast a.mast-banner span {
+	background: transparent url(http://www1.umn.edu/prod/fragments/ur_common/assets/img/homesite-sprited.png) 0 0 no-repeat;
+	position: absolute;
+	width: 320px;
+	height: 62px;
+}
+
+header div.mast nav.quick-links ul {
+	float: right;
+	margin: 5px 10px 0 0;
+}
+
+header div.mast nav.quick-links ul li {
+	display: block;
+	width: 73px;
+	height: 25px;
+	float: right;
+	margin-left: 5px;
+}
+
+header div.mast nav.quick-links ul li a {
+	display: block;
+	width: 0;
+	height: 25px;
+	padding-left: 73px;
+	overflow: hidden;
+}
+
+header div.mast nav.quick-links ul li {
+	width:73px;
+	height:25px;
+}
+
+header div.mast nav.quick-links ul li.onestop {
+	background: transparent url(http://www1.umn.edu/prod/fragments/ur_common/assets/img/homesite-sprited.png) -73px -62px no-repeat;
+}
+
+header div.mast nav.quick-links ul li.myu {
+	background: transparent url(http://www1.umn.edu/prod/fragments/ur_common/assets/img/homesite-sprited.png) 0 -62px no-repeat;
+}
+
+header div.mast form.mast-search {
+	background: transparent url(http://www1.umn.edu/prod/fragments/ur_common/assets/img/homesite-sprited.png) 0 -87px no-repeat;
+	height: 22px;
+	width: 269px;
+	position: relative;
+	clear: right;
+	float: right;
+	text-align: right;
+	margin-top: 5px;
+}
+
+header div.mast form.mast-search label {
+	position: absolute;
+	left: -9999px
+}
+
+header div.mast form.mast-search input.mast-search-text {
+	border: 0;
+	color: #666666;
+	width: 200px;
+	position: absolute;
+	top: 3px;
+	left: 15px;
+	font-size: 11px;
+	color: #333;
+}
+
+/* general footer */
+
+footer {
+	width:960px;
+	clear: both;
+	display:block;
+	padding-top:10px;
+	background-color: #ededed;
+
+}
+
+footer a,
+footer a:link,
+footer a:visited,
+footer a:active,
+footer a:hover {
+	text-decoration: none;
+	color: #7a0019;
+	border-bottom: 1px solid #c2a9ae;
+}
+
+footer a:hover,
+footer a:focus,
+footer a:active {
+	color: #666666;
+	border-bottom-color: #666666;
+}
+
+/* FOOTER */
+
+#footer-links *,
+#copyright-updated * {
+	font-size: 11px;
+	line-height:14px;
+}
+
+#copyright-updated {
+	float: left;
+	margin: 0 0 0 10px;
+	list-style: none;
+	color: #000;
+}
+
+#copyright-updated li {
+	margin:0 0 6px 0;
+}
+
+#footer-links {
+	width:400px;
+	float: right;
+	margin-right:10px;
+	text-align:right;
+}
+
+#footer-links h2 {
+	display:inline;
+	color: #000;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#footer-links ul {
+	display:inline;
+	text-align:right;
+}
+
+#footer-links li {
+	display:inline;
+	padding-left: 10px;
+	text-align:right;
+}
+
+/* MISCELLANY */
+
+.left, p.left { 
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.clear-left {
+	clear: left;
+}
+
+.left-anew {
+	float: left;
+	clear: left;
+}
+
+.right-anew {
+	float: right;
+	clear: right;
+}
+
+.way-off {
+	display: block;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	left: -9999px;
+}
+
+p.read-more a {
+	text-decoration:none;
+}
+
+p.read-more a:hover,
+p.read-more a:focus,
+p.read-more a:active {
+	text-decoration:underline;
+}
+
+
