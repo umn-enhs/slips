@@ -39,6 +39,8 @@ grails.project.dependency.resolution = {
     plugins {
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.7.1"
+        runtime ":jquery-ui:1.8.15"
+		runtime ":jquery-ui-timepicker:0.9.8.1"
         runtime ":resources:1.1.6"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities

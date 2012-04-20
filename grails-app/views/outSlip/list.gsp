@@ -24,9 +24,11 @@
 				<thead>
 					<tr>
 					
+						<th><g:message code="outSlip.type.label" default="Type" /></th>
+					
 						<th><g:message code="outSlip.staffFor.label" default="Staff For" /></th>
 					
-						<g:sortableColumn property="usernameTakenBy" title="${message(code: 'outSlip.usernameTakenBy.label', default: 'Username Taken By')}" />
+						<th><g:message code="outSlip.staffTakenBy.label" default="Staff Taken By" /></th>
 					
 						<g:sortableColumn property="dateTaken" title="${message(code: 'outSlip.dateTaken.label', default: 'Date Taken')}" />
 					
@@ -34,25 +36,23 @@
 					
 						<g:sortableColumn property="endDate" title="${message(code: 'outSlip.endDate.label', default: 'End Date')}" />
 					
-						<g:sortableColumn property="dateReturned" title="${message(code: 'outSlip.dateReturned.label', default: 'Date Returned')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${outSlipInstanceList}" status="i" var="outSlipInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${outSlipInstance.id}">${fieldValue(bean: outSlipInstance, field: "staffFor")}</g:link></td>
+						<td><g:link action="show" id="${outSlipInstance.id}">${fieldValue(bean: outSlipInstance, field: "type")}</g:link></td>
 					
-						<td>${fieldValue(bean: outSlipInstance, field: "usernameTakenBy")}</td>
+						<td>${fieldValue(bean: outSlipInstance, field: "staffFor")}</td>
+					
+						<td>${fieldValue(bean: outSlipInstance, field: "staffTakenBy")}</td>
 					
 						<td><g:formatDate date="${outSlipInstance.dateTaken}" /></td>
 					
 						<td><g:formatDate date="${outSlipInstance.startDate}" /></td>
 					
 						<td><g:formatDate date="${outSlipInstance.endDate}" /></td>
-					
-						<td><g:formatDate date="${outSlipInstance.dateReturned}" /></td>
 					
 					</tr>
 				</g:each>

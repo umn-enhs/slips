@@ -1,0 +1,55 @@
+div#slips {
+	margin-left: auto;
+	margin-right:: auto;
+	text-align: center;
+	background-image: url(../images/cork-board.png);
+}
+
+div.slip {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	width: 2.5in;
+	height: 3.3in;
+	overflow: hidden;
+	padding: 0.125in;
+	margin: 0.125in;
+
+	   -moz-box-shadow: 0 0 9px 1px #ddd;
+	-webkit-box-shadow: 0 0 9px 1px #ddd;
+	        box-shadow: 0 0 9px 1px #ddd;
+}
+
+div.slip h2 {
+	text-transform: capitalize;
+	text-align: center;
+}
+
+div.slip h3 {
+	border: thin solid black;
+	text-align: center;
+}
+
+div.slip ul {
+	height: 1.75in;
+	font-size: 0.15in;
+}
+div.slip ul li {
+	list-style: none;
+	margin-top: 0.125in;
+	height: 0.125in;
+}
+div.slip ul li span.comments {
+	display: block;
+	overflow: auto;
+	background-color: rgba(200,200,200,0.8);
+	height: 1in;
+	   -moz-border-radius: 0.05in;
+	-webkit-border-radius: 0.05in;
+	        border-radius: 0.05in;
+}
+
+div.slip div.takenBy {
+	margin-top: 0.5in;
+	font-size: 0.8em;
+}

@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list outSlip">
 			
+				<g:if test="${outSlipInstance?.type}">
+				<li class="fieldcontain">
+					<span id="type-label" class="property-label"><g:message code="outSlip.type.label" default="Type" /></span>
+					
+						<span class="property-value" aria-labelledby="type-label"><g:link controller="outSlipType" action="show" id="${outSlipInstance?.type?.id}">${outSlipInstance?.type?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${outSlipInstance?.staffFor}">
 				<li class="fieldcontain">
 					<span id="staffFor-label" class="property-label"><g:message code="outSlip.staffFor.label" default="Staff For" /></span>
@@ -32,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${outSlipInstance?.usernameTakenBy}">
+				<g:if test="${outSlipInstance?.staffTakenBy}">
 				<li class="fieldcontain">
-					<span id="usernameTakenBy-label" class="property-label"><g:message code="outSlip.usernameTakenBy.label" default="Username Taken By" /></span>
+					<span id="staffTakenBy-label" class="property-label"><g:message code="outSlip.staffTakenBy.label" default="Staff Taken By" /></span>
 					
-						<span class="property-value" aria-labelledby="usernameTakenBy-label"><g:fieldValue bean="${outSlipInstance}" field="usernameTakenBy"/></span>
+						<span class="property-value" aria-labelledby="staffTakenBy-label"><g:link controller="staff" action="show" id="${outSlipInstance?.staffTakenBy?.id}">${outSlipInstance?.staffTakenBy?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -77,29 +86,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${outSlipInstance?.vacation}">
+				<g:if test="${outSlipInstance?.why}">
 				<li class="fieldcontain">
-					<span id="vacation-label" class="property-label"><g:message code="outSlip.vacation.label" default="Vacation" /></span>
+					<span id="why-label" class="property-label"><g:message code="outSlip.why.label" default="Why" /></span>
 					
-						<span class="property-value" aria-labelledby="vacation-label"><g:formatBoolean boolean="${outSlipInstance?.vacation}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${outSlipInstance?.sick}">
-				<li class="fieldcontain">
-					<span id="sick-label" class="property-label"><g:message code="outSlip.sick.label" default="Sick" /></span>
-					
-						<span class="property-value" aria-labelledby="sick-label"><g:formatBoolean boolean="${outSlipInstance?.sick}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${outSlipInstance?.other}">
-				<li class="fieldcontain">
-					<span id="other-label" class="property-label"><g:message code="outSlip.other.label" default="Other" /></span>
-					
-						<span class="property-value" aria-labelledby="other-label"><g:formatBoolean boolean="${outSlipInstance?.other}" /></span>
+						<span class="property-value" aria-labelledby="why-label"><g:link controller="outSlipWhy" action="show" id="${outSlipInstance?.why?.id}">${outSlipInstance?.why?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -118,15 +109,6 @@
 					<span id="voicemail-label" class="property-label"><g:message code="outSlip.voicemail.label" default="Voicemail" /></span>
 					
 						<span class="property-value" aria-labelledby="voicemail-label"><g:formatBoolean boolean="${outSlipInstance?.voicemail}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${outSlipInstance?.type}">
-				<li class="fieldcontain">
-					<span id="type-label" class="property-label"><g:message code="outSlip.type.label" default="Type" /></span>
-					
-						<span class="property-value" aria-labelledby="type-label"><g:link controller="outSlipType" action="show" id="${outSlipInstance?.type?.id}">${outSlipInstance?.type?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

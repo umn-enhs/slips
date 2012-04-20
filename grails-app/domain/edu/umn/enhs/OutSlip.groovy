@@ -6,16 +6,14 @@ class OutSlip {
 
 	Staff staffFor
 
-	String usernameTakenBy
+	Staff staffTakenBy
 	Date dateTaken = new Date()
 
-	Date startDate
+	Date startDate = new Date()
 	Date endDate
 	Date dateReturned
 
-	Boolean vacation = false
-	Boolean sick = false
-	Boolean other = false
+	OutSlipWhy why
 
 	String comments
 
@@ -26,16 +24,19 @@ class OutSlip {
 	}
 
     static constraints = {
+		type()
 		staffFor()
-		usernameTakenBy()
+		staffTakenBy()
 		dateTaken()
 		startDate()
 		endDate(nullable:true)
 		dateReturned(nullable:true)
-		vacation()
-		sick()
-		other()
+		why(nullable: true)
 		comments(nullable:true)
 		voicemail()
     }
+
+	static mapping = {
+		sort type:'desc', endDate: 'desc'
+	}
 }
